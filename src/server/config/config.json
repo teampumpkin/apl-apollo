@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "karmafyprod",
+    "password": "HHVkarma#123",
+    "database": "apl",
+    "host": "karmafy.cpxx2qwfbjfv.us-west-2.rds.amazonaws.com",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "karmafyprod",
+    "password": "HHVkarma#123",
+    "database": "apl",
+    "host": "karmafy.cpxx2qwfbjfv.us-west-2.rds.amazonaws.com",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "karmafyprod",
+    "password": "HHVkarma#123",
+    "database": "apl",
+    "host": "karmafy.cpxx2qwfbjfv.us-west-2.rds.amazonaws.com",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}

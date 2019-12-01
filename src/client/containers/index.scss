@@ -1,0 +1,74 @@
+body{
+    font-family: Gotham medium;
+}
+.body{
+    width: auto;
+    height: 100vh;
+    position: relative;
+    .map{
+        cursor: grab;
+        overflow: auto;
+        position: absolute;
+        top:0;
+        right: 0px;
+        left:0px;
+        bottom: 0px;
+        .chart{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1000;
+            right: 0px;
+            border: 0px;
+            height: 100%;
+            width: 100%;
+            .marker{
+                position: absolute;
+                width: 45px;
+                height: 41px;
+                -webkit-transition: width 1s; /* Safari */
+                transition: width 1s;
+            }
+            .marker.active{
+              width: 45px;
+            }
+            .label{
+                position: absolute;
+                box-shadow: 0px 3px 6px #00000029;
+                min-width: 0px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                max-height: 14px;
+                background-color: #00ACB6;
+                border-radius: 4px;
+                font-size: 14px;
+                overflow: hidden;
+                max-height: 32px;
+                -webkit-transition: min-width 1s; /* Safari */
+                transition: min-width 1s max-width 1s;
+                width: auto;
+                max-width: max-content;
+                >img{
+                    margin-left:10px;
+                }
+            }
+            .label.active{
+              padding: 10px;
+              margin-left:7px;
+              min-width: 9em;
+              max-width: 200px;
+              overflow: auto;
+            }
+        }
+    }
+    .grid-container{
+        position: relative;
+        display: grid;
+        grid-template-columns: max-content;
+        >div{
+            position: relative;
+        }
+    }
+}
+

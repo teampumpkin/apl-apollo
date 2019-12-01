@@ -1,0 +1,36 @@
+version: "3.1"
+
+volumes:
+    db-data:
+
+services:
+  apl:
+    env_file:
+      - ./.env
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        app_port: ${NODEJS_PORT}
+        debug_port: ${DEBUG}
+    # command: npm run start
+    container_name: apl
+    restart: always
+    volumes:
+      - ./src:/app/apl/src
+    ports:
+      - "${SEVER_PORT}"
+      - "${DEBUG_PORT}"
+  mysql:
+      image: mysql:5.7
+      container_name: apl-mysql
+      working_dir: /application
+      volumes:
+        - db-data:/var/lib/mysql
+      environment:
+        - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
+        - MYSQL_DATABASE=${DB_NAME}
+        - MYSQL_USER=${DB_USER}
+        - MYSQL_PASSWORD=${DB_PASS}
+      ports:
+        - "8306:3306"
