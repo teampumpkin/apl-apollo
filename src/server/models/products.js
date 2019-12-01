@@ -33,6 +33,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(200),
       allowNull: true,
       field: 'base_image'
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      field: 'description'
     }
   }, {
     tableName: 'products'

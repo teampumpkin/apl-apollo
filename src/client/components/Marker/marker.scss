@@ -1,0 +1,62 @@
+.wrapper {
+    position: absolute;
+    display: inline-block;
+    min-width: 150px;
+    width: auto;
+    padding:10px;
+    background:transparent;
+    outline: none;
+    width: max-content;
+    overflow: visible;
+}
+.point{
+    opacity: 0;
+    position: absolute;
+    top:0;
+    bottom: 0px;
+    left:0px;
+    right:0px;
+    margin: auto;
+    height: 40px;
+}
+.contents {
+    width:0;
+    padding-right:0px;
+    overflow:hidden;
+    box-shadow: 0px 3px 6px #00000029;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    background-color: #00ACB6;
+    border-radius: 4px;
+    font-size: 14px;
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    position: absolute;
+    top:0;
+    bottom: 0px;
+    left:0px;
+    right:0px;
+    margin: auto;
+    >img{
+        margin-left: 10px;;
+    }
+}
+
+.wrapper.active .contents {
+    width:100%;
+    padding: 10px;
+    // padding-right:0px;
+    max-width: max-content;
+    height: 37px;
+    background-color: #00ACB6;
+}
+.wrapper:not(.active) .point{
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+    -o-transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
+    opacity: 1;
+}

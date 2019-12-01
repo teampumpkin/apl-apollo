@@ -4,12 +4,11 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import history from './history';
 import loadable from '@loadable/component';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import MainContainer from './containers/index';
 const MainContainer = loadable(() =>
-  import('./containers/index'),
+  import('./containers/MainContainer/MainContainer'),
 )
 const Product = loadable(() =>
-  import('./containers/product'),
+  import('./containers/ProductContainer/product'),
 )
 export default class App extends Component {
   render() {
