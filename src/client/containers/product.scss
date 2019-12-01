@@ -1,0 +1,18 @@
+.product{
+    background-color: #fff;
+}
+.product-card{
+    background-color: #fff;
+    z-index: 1001;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    top: -10px;
+    left: -20px;
+    height: 100vh;
+    position: fixed;
+    transform:none!important;
+    // top: 0px;
+    // left: 0px;
+    // right: 0px;
+}

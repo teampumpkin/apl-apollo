@@ -36,7 +36,7 @@ export default class Markers extends Component {
             transitionLeave={false}>
              <div className={`wrapper ${x.isActive ? 'active':null}`} style={style} id={`wrapper-${y}`} onClick={()=>this.handleClick(`wrapper-${y}`)} tabIndex={y}  key={y}  onBlur={(e) =>this.handleRemove(`wrapper-${y}`)}>
               <img key={y} ref={`mark-${y}`} name={`marker-point-${y}`}   className={`marker point`} src={`../assets/icons/${x.marker}`} alt="" />
-              <div name={`marker-point-${y}`} className={`contents`}  >{x.name}<img src={`../assets/icons/${x.expandIcon}`} alt="" /></div> 
+              <div name={`marker-point-${y}`} className={`contents`} onClick={() =>this.props.onMarkerClick(x)}  >{x.name}<img src={`../assets/icons/${x.expandIcon}`} alt=""  /></div> 
             </div>
             </ReactCSSTransitionGroup>
           })

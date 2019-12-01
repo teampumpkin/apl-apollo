@@ -23,6 +23,21 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATE,
       allowNull: false,
       field: 'updatedAt'
+    },
+    type: {
+      type: DataTypes.STRING(45),
+      allowNull: true,
+      field: 'type'
+    },
+    url: {
+      type: DataTypes.STRING(200),
+      allowNull: true,
+      field: 'url'
+    },
+    styling: {
+      type: DataTypes.JSON,
+      allowNull: true,
+      field: 'styling'
     }
   }, {
     tableName: 'assets'
