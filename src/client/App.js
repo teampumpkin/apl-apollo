@@ -7,15 +7,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const MainContainer = loadable(() =>
   import('./containers/MainContainer/MainContainer'),
 )
-const Product = loadable(() =>
-  import('./containers/ProductContainer/product'),
+const ProductContainer = loadable(() =>
+  import('./containers/ProductContainer/ProductContainer'),
 )
 export default class App extends Component {
   render() {
     return (
       <Router history={history}>
           <Route path="/" exact={true} component={MainContainer} />
-          <Route path="/:category/:product" component={Product} />
+          <Route path="/:category/:product" component={ProductContainer} />
       </Router>
     );
   }

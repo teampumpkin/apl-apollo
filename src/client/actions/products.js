@@ -1,5 +1,6 @@
 import axios from 'axios';
 const moke = require('../../../moke.json');
+const catogoryJson = require('../../../category.json');
 function requestProducts() {
     return {
         type: 'REQUEST_PRODUCTS'
@@ -22,17 +23,19 @@ function getProductsFailure(errorMessage) {
 
 export function getProductsAction() {
     return (dispatch, getState) => {
-        dispatch(requestProducts());
-        return axios.get('/api/products')
-            .then(response => {
-                if (response.data.success == true) {
-                    dispatch(getProductsSuccess(response.data.data));
-                } else {
-                    dispatch(getProductsFailure(response.errorMessage));
-                }
-            }).catch((errorMessage) => {
-                dispatch(getProductsFailure(errorMessage))
-            })
+        dispatch(getProductsSuccess(catogoryJson))
+        return catogoryJson;
+        // dispatch(requestProducts());
+        // return axios.get('/api/products')
+        //     .then(response => {
+        //         if (response.data.success == true) {
+        //             dispatch(getProductsSuccess(response.data.data));
+        //         } else {
+        //             dispatch(getProductsFailure(response.errorMessage));
+        //         }
+        //     }).catch((errorMessage) => {
+        //         dispatch(getProductsFailure(errorMessage))
+        //     })
     }
 };
 

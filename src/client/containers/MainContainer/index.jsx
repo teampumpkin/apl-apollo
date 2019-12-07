@@ -20,7 +20,7 @@ export default class MainContainer extends Component {
     const { list } = nextProps.productReducer;
     if (list && list.length > 0) {
       let map = list.map(x => {
-        x = { ...x, isActive: false, coords: [1055, 0, 0, 592] };
+        x = { ...x, isActive: false };
         return x;
       })
       this.setState({ MAP: map });

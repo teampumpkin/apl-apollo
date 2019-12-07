@@ -1,6 +1,7 @@
 let initialState = {
     list: [],
-    assets: {}
+    assets: {},
+    selectedProductId:1
 };
 
 export default function productReducer(state = initialState, action) {

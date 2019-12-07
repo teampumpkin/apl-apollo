@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.545" height="26.234" viewBox="0 0 34.545 26.234">
+    <defs>
+        <style>
+        .a,
+        .b {
+            fill: none;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+        }
+
+        .a {
+            stroke: #fff;
+        }
+
+        .b {
+            stroke: #fff;
+        }
+        </style>
+    </defs>
+    <g transform="translate(1 1)">
+        <g transform="translate(0.825 14.606)">
+            <path class="a" d="M529.129,755.644" transform="translate(-529.129 -755.644)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(13.269 0.189)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(18.07 0.189)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(8.469 4.72)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(13.269 4.72)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(18.07 4.72)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(22.871 4.72)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(3.668 9.25)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(8.469 9.25)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(13.269 9.25)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(18.07 9.25)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(22.871 9.25)" />
+            <rect class="a" width="0.378" height="0.378" transform="translate(27.671 9.25)" />
+        </g>
+        <path class="b" d="M541.518,728.4V721.79H527v-3.844h32.545v3.844h-13.7V728.4Z" transform="translate(-527 -717.946)" />
+    </g>
+</svg>
