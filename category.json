@@ -1,467 +1,325 @@
 [
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "#EF6A15",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 225,
-            "right": 0,
-            "bottom": "unset",
-            "left": 150
-        }
+  {
+    "id": 1,
+    "name": "AIRPORT",
+    "class": "",
+    "colorCode": "#EF6A15",
+    "style": {
+      "boxShadow": "0px 3px 17px #FFD800E0",
+      "backgroundColor": "#EF6A15"
     },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
-    },
-    {
-        "id": 1,
-        "name": "Demo1",
-        "class": "",
-        "colorCode": "",
-        "link": "",
-        "icon": "",
-        "background": "",
-        "coords": {
-            "top": 1055,
-            "right": 0,
-            "bottom": 0,
-            "left": 592
-        }
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 225,
+      "left": 150
     }
+  },
+  {
+    "id": 1,
+    "name": "AGRICULTURAL VEHICLES",
+    "class": "",
+    "colorCode": "#727903",
+    "style": {
+      "boxShadow": "0px 3px 17px #DCF70D",
+      "backgroundColor": "#727903"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 125,
+      "left": 375
+    }
+  },
+  {
+    "id": 1,
+    "name": "INDUSTRIAL EQUIPMENT",
+    "class": "",
+    "colorCode": "#727903",
+    "style": {
+      "boxShadow": "0px 3px 17px #DCF70D",
+      "backgroundColor": "#727903"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 185,
+      "left": 585
+    }
+  },
+  {
+    "id": 1,
+    "name": "MINING EQUIPMENTS",
+    "class": "",
+    "colorCode": "#727903",
+    "style": {
+      "boxShadow": "0px 3px 17px #DCF70D",
+      "backgroundColor": "#727903"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 75,
+      "left": 1355
+    }
+  },
+  {
+    "id": 1,
+    "name": "OFFICE TOWER",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 180,
+      "left": 785
+    }
+  },
+  {
+    "id": 1,
+    "name": "SCHOOL",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 318,
+      "left": 455
+    }
+  },
+  {
+    "id": 1,
+    "name": "PARK",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 475,
+      "left": 245
+    }
+  },
+  {
+    "id": 1,
+    "name": "GREENHOUSE",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 455,
+      "left": 625
+    }
+  },
+  {
+    "id": 1,
+    "name": "WAREHOUSE",
+    "class": "",
+    "colorCode": "#EF6A15",
+    "style": {
+      "boxShadow": "0px 3px 17px #FFD800E0",
+      "backgroundColor": "#EF6A15"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 550,
+      "left": 470
+    }
+  },
+  {
+    "id": 1,
+    "name": "METRO STATION",
+    "class": "",
+    "colorCode": "#EF6A15",
+    "style": {
+      "boxShadow": "0px 3px 17px #FFD800E0",
+      "backgroundColor": "#EF6A15"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 850,
+      "left": 220
+    }
+  },
+  {
+    "id": 1,
+    "name": "HOTEL",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 525,
+      "left": 860
+    }
+  },
+  {
+    "id": 1,
+    "name": "UNDER CONSTRUCTION",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 525,
+      "left": 1100
+    }
+  },
+  {
+    "id": 1,
+    "name": "HOSPITAL",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 455,
+      "left": 1288
+    }
+  },
+  {
+    "id": 1,
+    "name": "MALL",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 725,
+      "left": 1290
+    }
+  },
+  {
+    "id": 1,
+    "name": "COMMUNITY CENTRE",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 955,
+      "left": 1070
+    }
+  },
+  {
+    "id": 1,
+    "name": "ROW HOUSES",
+    "class": "",
+    "colorCode": "#016F74",
+    "style": {
+      "boxShadow": "0px 3px 17px #05FFFFD3",
+      "backgroundColor": "#016F74"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 1075,
+      "left": 611
+    }
+  },
+  {
+    "id": 1,
+    "name": "BRIDGE",
+    "class": "",
+    "colorCode": "#EF6A15",
+    "style": {
+      "boxShadow": "0px 3px 17px #FFD800E0",
+      "backgroundColor": "#EF6A15"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 255,
+      "left": 1165
+    }
+  },
+  {
+    "id": 1,
+    "name": "FACTORY",
+    "class": "",
+    "colorCode": "#EF6A15",
+    "style": {
+      "boxShadow": "0px 3px 17px #FFD800E0",
+      "backgroundColor": "#EF6A15"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 160,
+      "left": 1595
+    }
+  },
+  {
+    "id": 1,
+    "name": "STADIUM",
+    "class": "",
+    "colorCode": "#EF6A15",
+    "style": {
+      "boxShadow": "0px 3px 17px #FFD800E0",
+      "backgroundColor": "#EF6A15"
+    },
+    "link": "",
+    "icon": "",
+    "background": "",
+    "coords": {
+      "top": 1005,
+      "left": 1580
+    }
+  }
 ]

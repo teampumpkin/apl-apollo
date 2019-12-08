@@ -9,35 +9,63 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true,
       field: 'id'
     },
-    name: {
-      type: DataTypes.STRING(255),
+    title: {
+      type: DataTypes.STRING(100),
       allowNull: true,
-      field: 'name'
+      field: 'title'
+    },
+    subTitle: {
+      type: DataTypes.STRING(100),
+      allowNull: true,
+      field: 'sub_title'
+    },
+    discription: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      field: 'discription'
+    },
+    iconActive: {
+      type: DataTypes.STRING(100),
+      allowNull: true,
+      field: 'icon_active'
+    },
+    iconInActive: {
+      type: DataTypes.STRING(100),
+      allowNull: true,
+      field: 'icon_in_active'
+    },
+    style: {
+      type: DataTypes.JSON,
+      allowNull: true,
+      field: 'style'
+    },
+    headerStyle: {
+      type: DataTypes.JSON,
+      allowNull: true,
+      field: 'header_style'
+    },
+    categoryId: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      field: 'category_id'
+    },
+    isActive: {
+      type: DataTypes.INTEGER(4),
+      allowNull: true,
+      defaultValue: '0',
+      field: 'is_active'
     },
     createdAt: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
       field: 'createdAt'
     },
     updatedAt: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
       field: 'updatedAt'
-    },
-    categoryId: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true,
-      field: 'category_id'
-    },
-    baseImage: {
-      type: DataTypes.STRING(200),
-      allowNull: true,
-      field: 'base_image'
-    },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-      field: 'description'
     }
   }, {
     tableName: 'products'

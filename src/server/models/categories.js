@@ -14,6 +14,31 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       field: 'name'
     },
+    coords: {
+      type: DataTypes.JSON,
+      allowNull: false,
+      field: 'coords'
+    },
+    style: {
+      type: DataTypes.JSON,
+      allowNull: false,
+      field: 'style'
+    },
+    colorCode: {
+      type: DataTypes.STRING(45),
+      allowNull: false,
+      field: 'color_code'
+    },
+    titleImage: {
+      type: DataTypes.STRING(100),
+      allowNull: true,
+      field: 'title_image'
+    },
+    discription: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      field: 'discription'
+    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,

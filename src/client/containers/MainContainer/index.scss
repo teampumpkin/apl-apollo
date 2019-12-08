@@ -24,8 +24,9 @@ body{
             width: 100%;
             .marker{
                 position: absolute;
-                width: 45px;
-                height: 41px;
+                width: 41px;
+                height: 38px;
+                border-radius: 2px;
                 -webkit-transition: width 1s; /* Safari */
                 transition: width 1s;
             }

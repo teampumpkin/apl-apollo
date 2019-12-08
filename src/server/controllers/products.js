@@ -11,13 +11,19 @@ const ProductController = () => {
         if (list) {
             res.status(200).json({ success:true,data: list });
         } else {
-            const query = "select p.*,cat.name 'category' from products p inner join `categories` cat on p.`category_id`=cat.id;"
-            return db.sequelize.query(query, {
-                type: db.Sequelize.QueryTypes.SELECT,
-                replacements: {}
-            }).then(x => {
+            // const query = "select p.*,cat.name 'category' from products p inner join `categories` cat on p.`category_id`=cat.id;"
+            // return db.sequelize.query(query, {
+            //     type: db.Sequelize.QueryTypes.SELECT,
+            //     replacements: {}
+            // }).then(x => {
+            //     cache.put('products-list', x, 10000000)
+            //     res.status(200).json({success:true, data: x });
+            // });
+            db.categories.findAll().then(function (x) {
                 cache.put('products-list', x, 10000000)
                 res.status(200).json({success:true, data: x });
+            }).catch(function(err) {
+                res.status(400).json({success:false, error: err });
             });
         }
     };
