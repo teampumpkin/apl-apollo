@@ -4,10 +4,10 @@
     "discription": "Housing developers and industry experts rely heavily on APL Apollo Tubes for different facets of building homes. A strong skeleton, roofing, door frames, staircases and more, our products are a vital component in each area. From simple designs to more intricate and complex variations, our durable base materials ensure longevity & sturdiness.",
     "items": [
     {
-        "id": 1,
-        "title": "BUILD",
-        "subTitle": "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
-        "discription": "Steel Tube that is covered with a layer of zinc metal is known as Galvanised steel. During the process of galvanising, steel is immersed in a molten zinc bath to ensure a tough and uniform barrier. These Galvanised steel pipes and tubes, are used in water supply, structural applications etc. In order to seek long-term structural performance in the harshest of weather conditions, designers, builders and consumers have turned to using zinc-coated steel pipes. This is because zinc-coated galvanised steel pipes and tube resist the attack of wind, water and road salts. Apart from being easy on the pocket GI pipes are highly corrosion resistant, light in weight, easy to handle during transport and easy to join.",
+        "id" : 1,
+        "title" : "BUILD",
+        "sub_title" : "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
+        "discription" : "APL Apollo Tubes Limited manufactures high tensile strength hollow sections which are used widely in various industries including infrastructure and construction. These sections come in various shapes, sizes and finishes. Most common among them include Rectangular Hollow Sections (RHS) and Square Hollow Sections (SHS).",
         "iconActive": "/assets/1920/product-1920-46.svg",
         "iconInActive":"/assets/1920/product-1920-20.svg",
         "style": "ddedede",
@@ -33,10 +33,10 @@
         }]
     },
     {
-        "id": "",
-        "title": "COSTGARD",
-        "subTitle": "Pre-Galvanised Tube (Roofing)",
-        "discription": "MS Galvanised Sheets are used to manufacture these GP Tubes which are highly durable, stable and adhere to a long sustainability without atmospheric corrosion. Atmospheric and corrosive environment prevailing at individual sites are the guiding factors that determine the thickness of the coating to be provided to galvanised tubes. The complete look & finish is aesthetically controlled at APL Apollo’s in house galvanising facility. Since these tubes have a homogeneous coating all through, these can easily withstand any mechanical deformation without affecting their zinc coating to alter the parent material.",
+        "id" : 2,
+        "title" : "COSTGARD",
+        "sub_title" : "Pre-Galvanised Tube (Roofing)",
+        "discription" : "Apollo Costguard is highly durable, sustainable and stable tubes that can withstand atmospheric corrosion. The atmospheric and corrosive environment at each site determines the thickness of the coating provided. The complete look & finish is aesthetically controlled at APL Apollo’s in-house galvanising facility. It is perfectly used for roofing structures.",
         "iconActive": "/assets/1920/product-1920-21.svg",
         "iconInActive":"/assets/1920/product-1920-45.svg",
         "style": "",
@@ -62,10 +62,10 @@
         }]
     },
     {
-        "id": "",
-        "title": "FIRE-READY",
-        "subTitle": "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
-        "discription": "Steel Tube that is covered with a layer of zinc metal is known as Galvanised steel. During the process of galvanising, steel is immersed in a molten zinc bath to ensure a tough and uniform barrier. These Galvanised steel pipes and tubes, are used in water supply, structural applications etc. In order to seek long-term structural performance in the harshest of weather conditions, designers, builders and consumers have turned to using zinc-coated steel pipes. This is because zinc-coated galvanised steel pipes and tube resist the attack of wind, water and road salts. Apart from being easy on the pocket GI pipes are highly corrosion resistant, light in weight, easy to handle during transport and easy to join.",
+        "id" : 3,
+        "title" : "FIRE-READY",
+        "sub_title" : "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
+        "discription" : "Steel Tube that is covered with a layer of zinc metal is known as Galvanised steel. During the process of galvanising, steel is immersed in a molten zinc bath to ensure a tough and uniform barrier. These Galvanised steel pipes and tubes, are used in water supply, structural applications etc. In order to seek long-term structural performance in the harshest of weather conditions, designers, builders and consumers have turned to using zinc-coated steel pipes. This is because zinc-coated galvanised steel pipes and tube resist the attack of wind, water and road salts. Apart from being easy on the pocket GI pipes are highly corrosion resistant, light in weight, easy to handle during transport and easy to join.",
         "iconActive": "/assets/1920/product-1920-47.svg",
         "iconInActive":"/assets/1920/product-1920-15.svg",
         "style": "",
@@ -91,10 +91,10 @@
         }]
     },
     {
-        "id": "",
-        "title": "PLANK",
-        "subTitle": "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
-        "discription": "Steel Tube that is covered with a layer of zinc metal is known as Galvanised steel. During the process of galvanising, steel is immersed in a molten zinc bath to ensure a tough and uniform barrier. These Galvanised steel pipes and tubes, are used in water supply, structural applications etc. In order to seek long-term structural performance in the harshest of weather conditions, designers, builders and consumers have turned to using zinc-coated steel pipes. This is because zinc-coated galvanised steel pipes and tube resist the attack of wind, water and road salts. Apart from being easy on the pocket GI pipes are highly corrosion resistant, light in weight, easy to handle during transport and easy to join.",
+       "id" : 4,
+        "title" : "PLANK",
+        "sub_title" : "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
+        "discription" : "Apollo Steel Plank is a new-age steel product in India which is extremely secure and sturdy. It also helps save trees by replacing wooden planks with a better and sturdier alternative. Moreover, steel planks can be forged into more sizes, shapes and designs than their wooden counterparts making them the superior choice. It is being widely accepted for staircase and ceiling applications.",
         "iconActive": "/assets/1920/product-1920-48.svg",
         "iconInActive":"/assets/1920/product-1920-16.svg",
         "style": "",
@@ -120,10 +120,10 @@
         }]
     },
     {
-        "id": "",
-        "title": "ELEGENT",
-        "subTitle": "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
-        "discription": "Steel Tube that is covered with a layer of zinc metal is known as Galvanised steel. During the process of galvanising, steel is immersed in a molten zinc bath to ensure a tough and uniform barrier. These Galvanised steel pipes and tubes, are used in water supply, structural applications etc. In order to seek long-term structural performance in the harshest of weather conditions, designers, builders and consumers have turned to using zinc-coated steel pipes. This is because zinc-coated galvanised steel pipes and tube resist the attack of wind, water and road salts. Apart from being easy on the pocket GI pipes are highly corrosion resistant, light in weight, easy to handle during transport and easy to join.",
+        "id" : 5,
+        "title" : "ELEGENT",
+        "sub_title" : "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
+        "discription" : "All-new designer pipes, featured in elegant black color with unique carved designs offer products that are superior in quality and are more durable. Along with enhancing the aesthetics of the house, Apollo Elegant Pipes also assure longevity. Being corrosion-resistant and easy to weld, Apollo Elegant Pipes are the go-to products for handrails and fencing applications.",
         "iconActive": "/assets/1920/product-1920-49.svg",
         "iconInActive":"/assets/1920/product-1920-17.svg",
         "style": "",
@@ -149,10 +149,10 @@
         }]
     },
     {
-        "id": "",
-        "title": "CHAUKHAT",
-        "subTitle": "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
-        "discription": "Steel Tube that is covered with a layer of zinc metal is known as Galvanised steel. During the process of galvanising, steel is immersed in a molten zinc bath to ensure a tough and uniform barrier. These Galvanised steel pipes and tubes, are used in water supply, structural applications etc. In order to seek long-term structural performance in the harshest of weather conditions, designers, builders and consumers have turned to using zinc-coated steel pipes. This is because zinc-coated galvanised steel pipes and tube resist the attack of wind, water and road salts. Apart from being easy on the pocket GI pipes are highly corrosion resistant, light in weight, easy to handle during transport and easy to join.",
+        "id" : 6,
+        "title" : "CHAUKHAT",
+        "sub_title" : "Hot Dipped Galvanised (GI Pipe, Tubes and Steel Pipes)",
+        "discription" : "Apollo Chaukhat, India’s first closed steel door frames, is our ground-breaking creation that is in sync with our vision of providing quality and innovative products to our customers. We have employed India’s only Direct Forming Technology (DFT) to make these futuristic frames. Apollo Chaukhat frames are light in weight and the installation process is quick as they come in customizable sizes.",
         "iconActive": "/assets/1920/product-1920-50.svg",
         "iconInActive":"/assets/1920/product-1920-18.svg",
         "style": "",
@@ -178,10 +178,10 @@
         }]
     },
     {
-        "id": "",
-        "title": "SIGNETURE",
-        "subTitle": "(Fencing)",
-        "discription": "Our designer galvanized pipe – Apollo Signature is an upgrade to the conventional galvanized steel pipes by virtue of engraved designs on them. They prove to be a better option as they are highly resistant to corrosion and rust because of their galvanized layer. The products are also aesthetically superior as they grant elegance to the structures and being environment-friendly, they are a better substitute.",
+        "id" : 7,
+        "title" : "SIGNETURE",
+        "sub_title" : "(Fencing)",
+        "discription" : "Our designer galvanized pipe – Apollo Signature is an upgrade from the conventional galvanized steel pipes by virtue of engraved designs. They prove to be a better option as they are highly resistant to rust and corrosion because of their galvanized layer while the products are aesthetically superior. They are more environmentally friendly than using wood for fencing, handrails and gates.",
         "iconActive": "/assets/1920/product-1920-51.svg",
         "iconInActive":"/assets/1920/product-1920-19.svg",
         "style": "",
@@ -207,10 +207,10 @@
         }]
     },
     {
-        "id": "",
-        "title": "STANDERD",
-        "subTitle": "",
-        "discription": "MS black pipe is manufactured using high grade mild steel and the latest techniques in compliance with the set industry standards that ensure durability and strength. Mild Steel (MS) pipes are widely used across industries because it is easy to weld and forge in various shapes and sizes to meet the various pipelining and tubing applications. It is an ideal choice for carrying liquids, fire fighting, structural and general engineering. These pipes are also known as black pipes.",
+        "id" : 8,
+        "title" : "STANDERD",
+        "sub_title" : "",
+        "discription" : "MS black pipe is manufactured using high grade mild steel and the latest techniques in compliance with the set industry standards that ensure durability and strength. Mild Steel (MS) pipes are widely used across industries because it is easy to weld and forge in various shapes and sizes to meet the various pipelining and tubing applications. It is an ideal choice for carrying liquids, fire fighting, structural and general engineering. These pipes are also known as black pipes.",
         "iconActive": "/assets/1920/product-1920-19.svg",
         "iconInActive":"/assets/1920/product-1920-19.svg",
         "style": "",

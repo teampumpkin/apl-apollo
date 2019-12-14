@@ -15,7 +15,7 @@ export default class App extends Component {
     return (
       <Router history={history}>
           <Route path="/" exact={true} component={MainContainer} />
-          <Route path="/:category/:product" component={ProductContainer} />
+          <Route path="/:category" component={ProductContainer} />
       </Router>
     );
   }

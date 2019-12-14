@@ -41,6 +41,7 @@
     left:0px;
     right:0px;
     margin: auto;
+    height: 37px;
     >img{
         margin-left: 10px;
         height: 18px;
@@ -52,7 +53,6 @@
     width:100vh;
     padding: 10px;
     white-space: nowrap;
-    height: 37px;
     background-color: #00ACB6;
 }
 .wrapper:not(.active) .point{

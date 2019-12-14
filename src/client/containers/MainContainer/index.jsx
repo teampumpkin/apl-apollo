@@ -42,9 +42,9 @@ export default class MainContainer extends Component {
     });
     this.setState({ MAP: MAP });
   }
-  showProduct = (product) => {
-    this.props.getAssets(product.id)
-    this.props.history.push(`/${'sssss'}/${'sssssss'}`);
+  showProduct = (category) => {
+    this.props.getAssets(category.id)
+    this.props.history.push(`/${category.name.replace(' ','-')}`);
   }
   render() {
     return (
