@@ -18,6 +18,9 @@ export default class Product extends Component {
         }
         this.props.getAssets(this.props.productReducer.selectedProductId)
     }
+    componentWillMount(){
+        
+    }
     componentDidMount() {
         // const {assets} = this.props.productReducer;
     }

@@ -19,7 +19,6 @@
         transition: 0.3s;
         padding: 0px 1em;
         padding-top: 0px;
-        overflow: hidden;
         color: #0c0c0c;
         height:100%;
         .header{
@@ -33,13 +32,15 @@
                     padding: 10px;
                     font-weight: 400;
                     font-style: normal;
-                    padding: 1.5em 1em 1em 1em;  
+                    padding: 1.5em 1em 0px 1em;  
                     justify-content: center; 
+                    white-space: nowrap;
                     cursor: pointer;       
                     >img {
                         height: 27px;
                         margin-right: 10px;
                     }
+                    min-height: 100px;
                 }
                 .col:not(:last-of-type):after{
                     content: "";
