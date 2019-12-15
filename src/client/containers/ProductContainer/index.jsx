@@ -68,13 +68,13 @@ export default class Product extends Component {
                         <div className="body">
                             <div className={`leftNav`}>
                                 <div className="base-img">
-                                    <img src={this.getImage('images/'+item.assets[activeGalaryIndex - 1].url)} />
+                                    {item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].url ? <img src={this.getImage('images/'+item.assets[activeGalaryIndex - 1].url)} />:null}
                                 </div>
                                 <div className="galary">
                                     {
                                         item.assets.map((img, idx) => {
                                             const k = idx + 1;
-                                            return <img key={k} src={this.getImage(`images/${img.url}`)} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
+                                            return <img key={k} src={img && img.url ? this.getImage(`images/${img.url}`):null} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
                                         })
                                     }
                                 </div>
