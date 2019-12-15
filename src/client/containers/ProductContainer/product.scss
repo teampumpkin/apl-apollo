@@ -57,7 +57,8 @@
                     margin: auto;
                 }
                 .active {
-                    background: transparent url('../../assets/1920/product-1920-41.svg') 0% 0% no-repeat padding-box;
+                    background: transparent url('../../assets/svg/product-1920-41.svg') 0% 0% no-repeat padding-box;
+                    background-size: cover;
                     color: #fff;
                     border-bottom: 5px solid #F5863F;
                     width: 100%;
@@ -125,7 +126,7 @@
                     }
                 }
                 .component {
-                    background: transparent url('../../assets/1920/product-1920-38.svg') 0% 0% no-repeat padding-box;
+                    background: transparent url('../../assets/svg/product-1920-38.svg') 0% 0% no-repeat padding-box;
                     color: #fff;
                     border-top: 5px solid #F5863F;
                     background-size: cover;

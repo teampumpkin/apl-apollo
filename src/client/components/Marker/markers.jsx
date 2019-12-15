@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DragScroll from 'react-dragscroll';
 import MainStyle from './marker.scss';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import markerPoint from '../../assets/svg/point2.svg';
@@ -23,7 +22,6 @@ export default class Markers extends Component {
   }
 
   render() {
-    console.log("=========>",this.state.MAP)
     return (
       <div >
         {

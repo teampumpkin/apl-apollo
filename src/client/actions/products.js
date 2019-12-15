@@ -1,6 +1,6 @@
 import axios from 'axios';
 const moke = require('../../../moke.json');
-const catogoryJson = require('../../../category.json');
+const walkthrough = require('../../../walkthrough.json');
 function requestProducts() {
     return {
         type: 'REQUEST_PRODUCTS'
@@ -23,19 +23,27 @@ function getProductsFailure(errorMessage) {
 
 export function getProductsAction() {
     return (dispatch, getState) => {
-        // dispatch(getProductsSuccess(catogoryJson))
-        // return catogoryJson;
-        dispatch(requestProducts());
-        return axios.get('/api/products')
-            .then(response => {
-                if (response.data.success == true) {
-                    dispatch(getProductsSuccess(response.data.data));
-                } else {
-                    dispatch(getProductsFailure(response.errorMessage));
-                }
-            }).catch((errorMessage) => {
-                dispatch(getProductsFailure(errorMessage))
-            })
+        let assets = {};
+        let products = [];
+        walkthrough.map(x=>{
+            let y = JSON.parse(JSON.stringify(x));
+            assets[x.name.replace(/\s/g,'').toLocaleLowerCase()] = x;
+            delete y.items;
+            products.push(y);
+        })
+        dispatch(getProductsSuccess({assets:assets,products:products}));
+        return {assets:assets,products:products};
+        // dispatch(requestProducts());
+        // return axios.get('/api/products')
+        //     .then(response => {
+        //         if (response.data.success == true) {
+        //             dispatch(getProductsSuccess(response.data.data));
+        //         } else {
+        //             dispatch(getProductsFailure(response.errorMessage));
+        //         }
+        //     }).catch((errorMessage) => {
+        //         dispatch(getProductsFailure(errorMessage))
+        //     })
     }
 };
 
@@ -61,20 +69,14 @@ function getProductAssetsFailure(errorMessage) {
 
 export function getProductAssetsAction(id) {
     return (dispatch, getState) => {
-        dispatch(requestProductAssets());
-        dispatch(getProductAssetsSuccess(moke))
-        return moke;
-        // return axios.get(`/api/product/assets/${id}`).then(response => {
-        //     if (response.data.success == true) {
-        //         const state = getState();
-        //         let assets = state.productReducer.assets;
-        //         assets[id] = response.data.data
-        //         dispatch(getProductAssetsSuccess(assets));
-        //     } else {
-        //         dispatch(getProductAssetsFailure(response.errorMessage));
-        //     }
-        // }).catch((errorMessage) => {
-        //     dispatch(getProductAssetsFailure(errorMessage))
-        // })
+        return axios.get(`/api/product/${id}`).then(response => {
+            if (response.data.success == true) {
+                dispatch(getProductAssetsSuccess(response.data.data));
+            } else {
+                dispatch(getProductAssetsFailure(response.errorMessage));
+            }
+        }).catch((errorMessage) => {
+            dispatch(getProductAssetsFailure(errorMessage))
+        })
     }
 };

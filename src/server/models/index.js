@@ -38,6 +38,8 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+db.assets.belongsTo(db.products);
+db.products.hasMany(db.assets);
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

@@ -17,18 +17,23 @@ export default class Product extends Component {
                 component: null
             }
         }
-        this.props.getAssets(this.props.productReducer.selectedProductId)
+        // this.props.getAssets(this.props.match.params.category)
     }
     componentWillMount(){
-        
+        const category =  this.props.match.params.category ? this.props.match.params.category.replace(/\-/g,'').toLocaleLowerCase() : null;
+        const { assets } = this.props.productReducer;
+        if (assets[category] && Object.keys(assets[category]).length > 0) {
+            this.setState({data:assets[category]})
+        }else{
+            this.props.getProducts();
+        }
     }
-    componentDidMount() {
-        // const {assets} = this.props.productReducer;
-    }
+
     componentWillReceiveProps(nextProps) {
+        const category =  this.props.match.params.category ? this.props.match.params.category.replace(/\-/g,'').toLocaleLowerCase() : null;
         const { assets } = nextProps.productReducer;
-        if (assets && Object.keys(assets).length > 0) {
-            this.setState({data:assets})
+        if (assets[category] && Object.keys(assets[category]).length > 0) {
+            this.setState({data:assets[category]})
         }
     }
     changeItem = (key) => {
@@ -38,7 +43,7 @@ export default class Product extends Component {
         this.setState({activeGalaryIndex:key})
     }
     getImage = (img) =>{
-        return images('./' + img);
+        return img && img !=null ? images('./' + img):null;
     }
     render() {
         const { data, activeIndex, activeGalaryIndex } = this.state;
@@ -63,13 +68,13 @@ export default class Product extends Component {
                         <div className="body">
                             <div className={`leftNav`}>
                                 <div className="base-img">
-                                    <img src={this.getImage(item.images[activeGalaryIndex - 1].url)} />
+                                    <img src={this.getImage('images/'+item.assets[activeGalaryIndex - 1].url)} />
                                 </div>
                                 <div className="galary">
                                     {
-                                        item.images.map((img, idx) => {
+                                        item.assets.map((img, idx) => {
                                             const k = idx + 1;
-                                            return <img key={k} src={this.getImage(img.url)} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
+                                            return <img key={k} src={this.getImage(`images/${img.url}`)} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
                                         })
                                     }
                                 </div>

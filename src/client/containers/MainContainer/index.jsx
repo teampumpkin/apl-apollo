@@ -5,6 +5,8 @@ import Markers from '../../components/Marker/markers';
 export default class MainContainer extends Component {
   constructor(props) {
     super(props);
+    this.props.getProducts();
+    // this.props.getAssets(17);
     this.state = {
       popup: false,
       MAP: [
@@ -13,7 +15,7 @@ export default class MainContainer extends Component {
     }
   }
   componentWillMount() {
-    this.props.getProducts();
+    
   }
 
   componentWillReceiveProps(nextProps) {

@@ -55,6 +55,11 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: '0',
       field: 'is_active'
     },
+    category: {
+      type: DataTypes.STRING(45),
+      allowNull: true,
+      field: 'category'
+    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: true,

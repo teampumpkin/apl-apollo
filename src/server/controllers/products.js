@@ -5,53 +5,118 @@
  */
 const db = require('../models/index');
 const cache = require('memory-cache');
+const fs = require('fs');
 const ProductController = () => {
     const getAll = async (req, res) => {
         let list = cache.get('products-list');
         if (list) {
-            res.status(200).json({ success:true,data: list });
+            res.status(200).json({ success: true, data: list });
         } else {
-            // const query = "select p.*,cat.name 'category' from products p inner join `categories` cat on p.`category_id`=cat.id;"
-            // return db.sequelize.query(query, {
-            //     type: db.Sequelize.QueryTypes.SELECT,
-            //     replacements: {}
-            // }).then(x => {
-            //     cache.put('products-list', x, 10000000)
-            //     res.status(200).json({success:true, data: x });
-            // });
             db.categories.findAll().then(function (x) {
                 cache.put('products-list', x, 10000000)
-                res.status(200).json({success:true, data: x });
-            }).catch(function(err) {
-                res.status(400).json({success:false, error: err });
+                res.status(200).json({ success: true, data: x });
+            }).catch(function (err) {
+                res.status(400).json({ success: false, error: err });
             });
         }
     };
 
-    const getAssets = async (req, res) => {
-        const productId = req.params.productId;
-        let list = cache.get(`products-${productId}`);
+    const getProductDetails = async (req, res) => {
+        const slug = req.params.slug.split('-').join(' ');
+        let list = cache.get(`products-${slug}`);
         if (list) {
-            res.status(200).json({ success:true,data: list });
+            res.status(200).json({ success: true, data: list });
         } else {
-            const query = "select asset.* from `asset_managers` ass inner join assets asset on ass.`asset_id` = asset.id where ass.product_id =:productId ;";
-            return db.sequelize.query(query, {
-                type: db.Sequelize.QueryTypes.SELECT,
-                replacements: {productId:productId}
-            }).then(x => {
-                cache.put(`products-${productId}`, x, 10000000)
-                res.status(200).json({success:true, data: x });
+            const cat = await db.categories.findOne({
+                attributes: ['id', 'name', 'coords', 'style', 'colorCode', 'titleImage', 'discription', 'animation', 'products'],
+                where: {
+                    name: slug
+                }
+            }).catch(err => {
+                res.status(400).json({ success: false, error: err });
+            })
+            db.products.findAll({
+                attributes: ['id', 'title', 'subTitle', 'discription', 'iconActive', 'iconInActive', 'style', 'headerStyle', 'categoryId', 'isActive'],
+                where: {
+                    id: cat.dataValues.products.split(',')
+                },
+                include: [
+                    {
+                        model: db.assets,
+                        attributes: ['id', 'url', 'thumb', 'style', 'animation'],
+                        alise: "images",
+                        paranoid: false,
+                        required: true
+                    }
+                ],
+                order: [
+                    [db.assets, 'id', 'DESC'],
+                ],
+            }).then(products => {
+                cache.put(`products-${slug}`, { ...cat.dataValues, items: products }, 10000000);
+                res.status(200).json({ success: true, data: { ...cat.dataValues, items: products } });
+            }).catch(function (err) {
+                res.status(400).json({ success: false, error: err });
             });
         }
     };
-    const clear = async(req,res)=>{
+
+    const getProducts = async () => {
+        return db.products.findAll({
+            attributes: ['id', 'title', 'subTitle', 'discription', 'iconActive', 'iconInActive', 'style', 'headerStyle', 'categoryId', 'isActive'],
+            include: [
+                {
+                    model: db.assets,
+                    attributes: ['id', 'url', 'thumb', 'style', 'animation'],
+                    alise: "images",
+                    paranoid: false,
+                    required: true
+                }
+            ],
+            order: [
+                [db.assets, 'id', 'DESC'],
+            ],
+        }).then(products => {
+            let data = {};
+            products.map(x => {
+                data[x.id] = x;
+            })
+            return data;
+        }).catch(function (err) {
+            return null;
+        });
+    };
+
+    const refreshJson = async (req, res) => {
+        const products = await getProducts();
+        const cat = await db.categories.findAll({
+            attributes: ['id', 'name', 'coords', 'style', 'colorCode', 'titleImage', 'discription', 'animation', 'products'],
+        }).catch(err => {
+            res.status(400).json({ success: false, error: err });
+        });
+        const category = cat.map(x => {
+            x.dataValues.items = [];
+            x.dataValues.products.split(',').forEach(y => {
+                x.dataValues.items.push(products[y]);
+            });
+            return x;
+        })
+        fs.writeFile('walkthrough.json', JSON.stringify(category), 'utf8', ()=>{
+            return res.status(200).json({ success: true });
+        }).catch(err=>{
+            res.status(400).json({ success: false, error: err });
+        })
+    };
+    const clear = async (req, res) => {
         cache.clear();
         return res.status(200).json({ success: true });
     }
     return {
         getAll,
         clear,
-        getAssets
+        getProductDetails,
+        getProducts,
+        refreshJson
     };
 };
 module.exports = ProductController;

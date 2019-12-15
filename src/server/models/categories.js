@@ -39,6 +39,16 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       field: 'discription'
     },
+    animation: {
+      type: DataTypes.STRING(200),
+      allowNull: true,
+      field: 'animation'
+    },
+    products: {
+      type: DataTypes.STRING(45),
+      allowNull: true,
+      field: 'products'
+    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
