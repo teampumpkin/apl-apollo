@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import style from './product.scss';
+const images = require.context('../../assets/', true);
 export default class Product extends Component {
     constructor(props) {
         super(props);
@@ -36,7 +37,9 @@ export default class Product extends Component {
     changeImage = (key) => {
         this.setState({activeGalaryIndex:key})
     }
-   
+    getImage = (img) =>{
+        return images('./' + img);
+    }
     render() {
         const { data, activeIndex, activeGalaryIndex } = this.state;
         const item = Object.keys(data).length > 0 ? data.items[activeIndex - 1]:null;
@@ -50,7 +53,7 @@ export default class Product extends Component {
                                     data.items.map((x, y) => {
                                         const key = y + 1;
                                         return <div key={key} className={`col ${key == activeIndex ? 'active' : null}`} onClick={() => this.changeItem(key)}>
-                                            <img src={key == activeIndex ? x.iconActive:x.iconInActive} />
+                                            <img src={key == activeIndex ? this.getImage(x.iconActive):this.getImage(x.iconInActive)} />
                                             <label>{x.title}</label>
                                         </div>
                                     })
@@ -60,13 +63,13 @@ export default class Product extends Component {
                         <div className="body">
                             <div className={`leftNav`}>
                                 <div className="base-img">
-                                    <img src={item.images[activeGalaryIndex - 1].url} />
+                                    <img src={this.getImage(item.images[activeGalaryIndex - 1].url)} />
                                 </div>
                                 <div className="galary">
                                     {
                                         item.images.map((img, idx) => {
                                             const k = idx + 1;
-                                            return <img key={k} src={img.thumb || img.url} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
+                                            return <img key={k} src={this.getImage(img.url)} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
                                         })
                                     }
                                 </div>
