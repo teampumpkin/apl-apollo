@@ -9,9 +9,7 @@ export default class MainContainer extends Component {
     // this.props.getAssets(17);
     this.state = {
       popup: false,
-      MAP: [
-        // { name: "2", coords: [1055, 0, 0, 592], name: "ROW HOUSES", isActive: false, marker: "Group19.png", expandIcon: "arrow-right-circle.png" },
-      ]
+      MAP: []
     }
   }
   componentWillMount() {
@@ -45,7 +43,6 @@ export default class MainContainer extends Component {
     this.setState({ MAP: MAP });
   }
   showProduct = (category) => {
-    this.props.getAssets(category.id)
     this.props.history.push(`/${category.name.replace(' ','-')}`);
   }
   render() {

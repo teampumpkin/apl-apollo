@@ -28,7 +28,7 @@ const ProductController = () => {
             res.status(200).json({ success: true, data: list });
         } else {
             const cat = await db.categories.findOne({
-                attributes: ['id', 'name', 'coords', 'style', 'colorCode', 'titleImage', 'discription', 'animation', 'products'],
+                attributes: ['id', 'name', 'coords', 'style', 'colorCode', 'titleImage', 'discription', 'animation', 'products','layout'],
                 where: {
                     name: slug
                 }
@@ -38,7 +38,7 @@ const ProductController = () => {
             db.products.findAll({
                 attributes: ['id', 'title', 'subTitle', 'discription', 'iconActive', 'iconInActive', 'style', 'headerStyle', 'categoryId', 'isActive'],
                 where: {
-                    id: cat.dataValues.products.split(',')
+                    categoryId: cat.dataValues.id
                 },
                 include: [
                     {
@@ -46,11 +46,12 @@ const ProductController = () => {
                         attributes: ['id', 'url', 'thumb', 'style', 'animation'],
                         alise: "images",
                         paranoid: false,
-                        required: true
+                        // required: true
                     }
                 ],
                 order: [
-                    [db.assets, 'id', 'DESC'],
+                    ['id', 'ASC'],
+                    [db.assets, 'id', 'DESC']
                 ],
             }).then(products => {
                 cache.put(`products-${slug}`, { ...cat.dataValues, items: products }, 10000000);

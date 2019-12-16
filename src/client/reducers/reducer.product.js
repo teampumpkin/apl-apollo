@@ -10,8 +10,7 @@ export default function productReducer(state = initialState, action) {
         case 'GET_PRODUCTS_SUCCESS':
             return {
                 ...state,
-                list: action.data.products,
-                assets:action.data.assets
+                list: action.data
             };
         case 'GET_PRODUCT_ASSETS_SUCCESS':
             return {

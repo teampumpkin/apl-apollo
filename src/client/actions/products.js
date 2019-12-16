@@ -23,27 +23,27 @@ function getProductsFailure(errorMessage) {
 
 export function getProductsAction() {
     return (dispatch, getState) => {
-        let assets = {};
-        let products = [];
-        walkthrough.map(x=>{
-            let y = JSON.parse(JSON.stringify(x));
-            assets[x.name.replace(/\s/g,'').toLocaleLowerCase()] = x;
-            delete y.items;
-            products.push(y);
-        })
-        dispatch(getProductsSuccess({assets:assets,products:products}));
-        return {assets:assets,products:products};
-        // dispatch(requestProducts());
-        // return axios.get('/api/products')
-        //     .then(response => {
-        //         if (response.data.success == true) {
-        //             dispatch(getProductsSuccess(response.data.data));
-        //         } else {
-        //             dispatch(getProductsFailure(response.errorMessage));
-        //         }
-        //     }).catch((errorMessage) => {
-        //         dispatch(getProductsFailure(errorMessage))
-        //     })
+        // let assets = {};
+        // let products = [];
+        // walkthrough.map(x=>{
+        //     let y = JSON.parse(JSON.stringify(x));
+        //     assets[x.name.replace(/\s/g,'').toLocaleLowerCase()] = x;
+        //     delete y.items;
+        //     products.push(y);
+        // })
+        // dispatch(getProductsSuccess({assets:assets,products:products}));
+        // return {assets:assets,products:products};
+        dispatch(requestProducts());
+        return axios.get('/api/products')
+            .then(response => {
+                if (response.data.success == true) {
+                    dispatch(getProductsSuccess(response.data.data));
+                } else {
+                    dispatch(getProductsFailure(response.errorMessage));
+                }
+            }).catch((errorMessage) => {
+                dispatch(getProductsFailure(errorMessage))
+            })
     }
 };
 

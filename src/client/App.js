@@ -5,10 +5,10 @@ import history from './history';
 import loadable from '@loadable/component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const MainContainer = loadable(() =>
-  import('./containers/MainContainer/MainContainer'),
+  import(/* webpackPrefetch: true *//* webpackChunkName: "MainContainer" */'./containers/MainContainer/MainContainer'),
 )
 const ProductContainer = loadable(() =>
-  import('./containers/ProductContainer/ProductContainer'),
+  import(/* webpackPrefetch: true *//* webpackChunkName: "ProductContainer" */'./containers/ProductContainer/ProductContainer'),
 )
 export default class App extends Component {
   render() {
