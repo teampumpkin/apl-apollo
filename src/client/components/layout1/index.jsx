@@ -63,7 +63,7 @@ export default class Layout1 extends Component {
                             <div className={`leftNav`}>
                                 <div className="base-img">
                                     <div>
-                                        {item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].url ? <img src={this.getImage(item.assets[activeGalaryIndex - 1].url)} /> : null}
+                                        {item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].url ? <img className={`${item.assets[activeGalaryIndex - 1].animation?'fade':null}`} src={this.getImage(item.assets[activeGalaryIndex - 1].url)} /> : null}
                                         <GifPlayer src={item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].animation ? `../../assets/gifs/${item.assets[activeGalaryIndex - 1].animation}` : null} />
                                     </div>
                                 </div>
