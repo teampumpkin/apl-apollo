@@ -33,6 +33,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       field: 'product_id'
     },
+    order: {
+      type: DataTypes.INTEGER(11),
+      allowNull: true,
+      field: 'order'
+    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: true,

@@ -3,6 +3,7 @@ import style from './layout1.scss';
 const images = require.context('../../assets/images', true);
 const svgs = require.context('../../assets/svg', true);
 const gifs = require.context('../../assets/gifs', true);
+import {getGradient} from '../gradient';
 import GifPlayer from '../gifPlayer';
 export default class Layout1 extends Component {
     constructor(props) {
@@ -51,7 +52,7 @@ export default class Layout1 extends Component {
                                 {
                                     data.items.map((x, y) => {
                                         const key = y + 1;
-                                        return <div key={key} className={`col ${key == activeIndex ? 'active' : null}`} onClick={() => this.changeItem(key)}>
+                                        return <div style={key == activeIndex ? getGradient(data.colorCode):null} key={key} className={`col ${key == activeIndex ? 'active' : null}`} onClick={() => this.changeItem(key)}>
                                             <img src={key == activeIndex ? this.getImage(x.iconActive) : this.getImage(x.iconInActive)} />
                                             <label>{x.title}</label>
                                         </div>
@@ -71,7 +72,7 @@ export default class Layout1 extends Component {
                                     {item ?
                                         item.assets.map((img, idx) => {
                                             const k = idx + 1;
-                                            return <img key={k} src={img && img.url ? this.getImage(`${img.url}`) : null} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
+                                            return <img key={k} src={img && (img.url || img.thumb) ? this.getImage(`${img.thumb || img.url}`) : null} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
                                         })
                                         : null
                                     }
@@ -84,7 +85,7 @@ export default class Layout1 extends Component {
                                     </div>
                                     <p className="discription">{data.discription}</p>
                                 </div>
-                                <div className={`component row`}>
+                                <div className={`component row`} style={getGradient(data.colorCode)}>
                                     <div className="item">
                                         <span>{item ? item.title : null}&nbsp;:</span>
                                         <span>&nbsp;{item ? item.subTitle : null}</span>

@@ -4,6 +4,9 @@
         .a {
             fill: #fff;
         }
+        circle,path{
+            fill:#fff;
+        }
         </style>
     </defs>
     <g transform="translate(0 32.105)">
