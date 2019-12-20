@@ -60,6 +60,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       field: 'category'
     },
+    order: {
+      type: DataTypes.INTEGER(4),
+      allowNull: true,
+      field: 'order'
+    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: true,

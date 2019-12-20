@@ -53,7 +53,7 @@ export default class Layout1 extends Component {
                                     data.items.map((x, y) => {
                                         const key = y + 1;
                                         return <div style={key == activeIndex ? getGradient(data.colorCode):null} key={key} className={`col ${key == activeIndex ? 'active' : null}`} onClick={() => this.changeItem(key)}>
-                                            <img src={key == activeIndex ? this.getImage(x.iconActive) : this.getImage(x.iconInActive)} />
+                                            <img src={key == activeIndex && x.iconActive ? this.getImage(x.iconActive) : (x.iconInActive ? this.getImage(x.iconInActive):null)} />
                                             <label>{x.title}</label>
                                         </div>
                                     })

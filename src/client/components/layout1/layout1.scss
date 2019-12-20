@@ -15,7 +15,7 @@
             .row {
                 display: grid;
                 grid-auto-flow: column;
-                grid-auto-columns: minmax(max-content, 300px);
+                grid-auto-columns: minmax(max-content, 340px);
                 .col {
                     flex: 1;
                     display: flex;
@@ -27,7 +27,7 @@
                     justify-content: center; 
                     white-space: nowrap;
                     align-items: center;
-                    max-width: 300px;
+                    text-transform: uppercase;
                     cursor: pointer;       
                     >img {
                         height: 27px;

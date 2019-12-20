@@ -50,8 +50,8 @@ const ProductController = () => {
                     }
                 ],
                 order: [
-                    ['id', 'ASC'],
-                    [db.assets, 'order', 'ASC']
+                    ['order', 'ASC'],
+                    // [db.assets, 'order', 'ASC']
                 ],
             }).then(products => {
                 cache.put(`products-${slug}`, { ...cat.dataValues, items: products }, 10000000);
