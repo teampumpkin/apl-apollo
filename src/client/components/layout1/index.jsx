@@ -87,7 +87,6 @@ export default class Layout1 extends Component {
                                 </div>
                                 <div className={`component row`} style={getGradient(data.colorCode)}>
                                     <div className="item">
-                                        <span>{item ? item.title : null}&nbsp;:</span>
                                         <span>&nbsp;{item ? item.subTitle : null}</span>
                                     </div>
                                     <div className="discription">
