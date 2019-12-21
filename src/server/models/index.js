@@ -11,10 +11,12 @@ const config = {
     "password": process.env.RDS_PASS,
     "database": process.env.RDS_DB,
     "host": process.env.RDS_HOST,
+    // "port":process.env.RDS_PORT,
+    // "protocol":"tcp",
     "dialect": "mysql",
     "operatorsAliases": false
 };
-
+console.log("=========>",config)
 let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);

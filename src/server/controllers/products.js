@@ -89,6 +89,7 @@ const ProductController = () => {
     };
 
     const refreshJson = async (req, res) => {
+        console.log("=======>",db)
         const products = await getProducts();
         const cat = await db.categories.findAll({
             attributes: ['id', 'name', 'coords', 'style', 'colorCode', 'titleImage', 'discription', 'animation', 'products'],
