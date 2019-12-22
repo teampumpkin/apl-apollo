@@ -13,7 +13,7 @@ services:
       args:
         app_port: ${NODEJS_PORT}
         debug_port: ${DEBUG}
-    # command: npm run start
+    command: npm run start
     container_name: apl
     restart: always
     volumes:
