@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import style from './layout1.scss';
-const images = require.context('../../assets/images', true);
-const svgs = require.context('../../assets/svg', true);
-const gifs = require.context('../../assets/gifs', true);
+// const images = require.context('../../assets/images', true);
+// const svgs = require.context('../../assets/svg', true);
+// const gifs = require.context('../../assets/gifs', true);
 import {getGradient} from '../gradient';
 import GifPlayer from '../gifPlayer';
 export default class Layout1 extends Component {
@@ -26,19 +26,19 @@ export default class Layout1 extends Component {
     changeImage = (key) => {
         this.setState({ activeGalaryIndex: key })
     }
-    getImage = (img) => {
-        if (img) {
-            if (img.includes('.svg')) {
-                return img && img != null ? svgs('./' + img) : null;
-            } else if (img.includes('.gif')) {
-                return img && img != null ? gifs('./' + img) : null;
-            } else {
-                return img && img != null ? images('./' + img) : null;
-            }
-        } else {
-            return null;
-        }
-    }
+    // getImage = (img) => {
+    //     if (img) {
+    //         if (img.includes('.svg')) {
+    //             return img && img != null ? svgs('./' + img) : null;
+    //         } else if (img.includes('.gif')) {
+    //             return img && img != null ? gifs('./' + img) : null;
+    //         } else {
+    //             return img && img != null ? images('./' + img) : null;
+    //         }
+    //     } else {
+    //         return null;
+    //     }
+    // }
 
     render() {
         const { data, activeIndex, activeGalaryIndex } = this.state;
@@ -53,7 +53,7 @@ export default class Layout1 extends Component {
                                     data.items.map((x, y) => {
                                         const key = y + 1;
                                         return <div style={key == activeIndex ? getGradient(data.colorCode):null} key={key} className={`col ${key == activeIndex ? 'active' : null}`} onClick={() => this.changeItem(key)}>
-                                            <img src={key == activeIndex && x.iconActive ? this.getImage(x.iconActive) : (x.iconInActive ? this.getImage(x.iconInActive):null)} />
+                                            <img src={key == activeIndex && x.iconActive ? `../../assets/svg/${x.iconActive}` : (x.iconInActive ? `../../assets/svg/${x.iconInActive}`:null)} />
                                             <label>{x.title}</label>
                                         </div>
                                     })
@@ -64,16 +64,15 @@ export default class Layout1 extends Component {
                             <div className={`leftNav`}>
                                 <div className="base-img">
                                     <div>
-                                        {/* {item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].url ? <img className={`${item.assets[activeGalaryIndex - 1].animation?'fade':null}`} src={this.getImage(item.assets[activeGalaryIndex - 1].url)} /> : null} */}
                                         {item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].url ? <img className={`${item.assets[activeGalaryIndex - 1].animation?'fade':null}`} src={`/assets/images/${item.assets[activeGalaryIndex - 1].url}`} /> : null}
-                                        <GifPlayer src={item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].animation ? `../../assets/gifs/${item.assets[activeGalaryIndex - 1].animation}` : null} />
+                                        <GifPlayer src={item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].animation ? `${item.assets[activeGalaryIndex - 1].animation}` : null} />
                                     </div>
                                 </div>
                                 <div className="galary">
                                     {item ?
                                         item.assets.map((img, idx) => {
                                             const k = idx + 1;
-                                            return <img key={k} src={img && (img.url || img.thumb) ? this.getImage(`${img.thumb || img.url}`) : null} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
+                                            return <img key={k} src={img && (img.url || img.thumb) ? `../../assets/images/${img.thumb || img.url}` : null} className={`${k == activeGalaryIndex ? 'active' : null}`} onClick={() => this.changeImage(k)} />
                                         })
                                         : null
                                     }

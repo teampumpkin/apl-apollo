@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 export default class GifPlayer extends Component {
     constructor(props){
         super(props);
-        this.state = {rand:Math.floor(Math.random() * 10000)}
     }
     componentDidUpdate(){
         

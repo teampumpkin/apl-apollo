@@ -43,7 +43,7 @@ export default class MainContainer extends Component {
     this.setState({ MAP: MAP });
   }
   showProduct = (category) => {
-    this.props.history.push(`/${category.name.replace(' ','-')}`);
+    this.props.history.push(`/${category.name.replace(' ','-').toLowerCase()}`);
   }
   render() {
     return (
