@@ -43,7 +43,7 @@ export default class Layout1 extends Component {
     render() {
         const { data, activeIndex, activeGalaryIndex } = this.state;
         const item = Object.keys(data).length > 0 && data.items.length > 0 ? data.items[activeIndex - 1] : null;
-        console.log("------->",item)
+        console.log("------->", item)
         return (
             <>
                 {data && Object.keys(data).length > 0 ? <div className="layout1" >
@@ -65,10 +65,10 @@ export default class Layout1 extends Component {
                             <div className={`leftNav`}>
                                 <div className="base-img">
                                     {
-                                    item.assets.map((x,y) => {
-                                            return <div key={y} className={`${activeGalaryIndex -1 != y ? 'hidden':null}`}>
+                                        item.assets.map((x, y) => {
+                                            return <div key={y} className={`${activeGalaryIndex - 1 != y ? 'hidden' : null}`}>
                                                 <img className={`${x.animation ? 'fade' : null}`} src={`/assets/images/${item.assets[activeGalaryIndex - 1].url}`} />
-                                                <GifPlayer  src={x.animation ? `../../assets/gifs/${x.animation}` : null} />
+                                                <GifPlayer src={x.animation ? `../../assets/gifs/${x.animation}` : null} />
                                             </div>
                                         })
                                     }
