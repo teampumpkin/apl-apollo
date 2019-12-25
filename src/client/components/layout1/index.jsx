@@ -49,20 +49,21 @@ export default class Layout1 extends Component {
                         </div>
                         <div className="body">
                             <div className={`leftNav`}>
-                                <div className="base-img">
-                                    { item && item.assets ? 
-                                        item.assets.map((z, p) => {
+                            { item && item.assets ? <div className="base-img">
+                                    
+                                       { item.assets.map((z, p) => {
                                             return <div ref={this.myRef} key={p} className={`${(activeGalaryIndex - 1) == p ? null : 'hidden'}`}>
                                                 {z.url ? <img className={`${z.animation ? 'fade' : null}`} src={`/assets/images/${z.url}`} /> : null}
                                                 {z.animation ? <GifPlayer src={z.animation} />:null}
                                             </div>
-                                        })
-                                   :null}
+                                        })}
+                                  
                                     {/* <div>
                                         {item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].url ? <img className={`${item.assets[activeGalaryIndex - 1].animation ? 'fade' : null}`} src={`/assets/images/${item.assets[activeGalaryIndex - 1].url}`} /> : null}
                                         <GifPlayer src={item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].animation ? `${item.assets[activeGalaryIndex - 1].animation}` : null} />
                                     </div> */}
                                 </div>
+                                 :null}
                                 <div className="galary">
                                     {item ?
                                         item.assets.map((img, idx) => {
