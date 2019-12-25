@@ -38,7 +38,8 @@ const ProductController = () => {
             db.products.findAll({
                 attributes: ['id', 'title', 'subTitle', 'discription', 'iconActive', 'iconInActive', 'style', 'headerStyle', 'categoryId', 'isActive'],
                 where: {
-                    categoryId: cat.dataValues.id
+                    categoryId: cat.dataValues.id,
+                    isActive:1
                 },
                 include: [
                     {
