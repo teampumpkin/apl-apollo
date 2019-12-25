@@ -51,11 +51,11 @@ export default class Layout1 extends Component {
                             <div className={`leftNav`}>
                                 {
                                     data.items.map((x, y) => {
-                                       return  <div className="base-img" ref={this.myRef}>
+                                       return  <div className="base-img" key={y} ref={this.myRef}>
                                             {x.assets.map((z, p) => {
                                                 return <div key={p} className={`${(activeGalaryIndex - 1) == p && (activeIndex - 1) == y ? null : 'hidden'}`}>
                                                     {z.url ? <img className={`${z.animation ? 'fade' : null}`} src={`/assets/images/${z.url}`} /> : null}
-                                                    {z.animation ? <GifPlayer src={z.animation} /> : null}
+                                                    {z.animation ? <GifPlayer data={Math.random() * (10 - 100) + 100} src={`${(activeGalaryIndex - 1) == p && (activeIndex - 1) == y ?z.animation:null}`} /> : null}
                                                 </div>
                                             })}
                                         </div>

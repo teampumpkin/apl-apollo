@@ -6,7 +6,7 @@ export default class GifPlayer extends Component {
     componentDidUpdate(){
         
     }
-    shouldComponentUpdate(){
+    shouldComponentUpdate(nextProps,nextState){
         return true;
     }
     render() {
