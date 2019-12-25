@@ -137,7 +137,6 @@
                     font-size: 33px;
                     padding-bottom: 15px;
                     font-family: Gotham-bold;
-                    font-weight: 900;
                 }
                 .component {
                     color: #fff;
@@ -153,6 +152,9 @@
                         text-transform: uppercase;
                         font-family: BebasNeue-Bold;
                         font-size: 24px;
+                        >span{
+                            font-weight: 900;
+                        }
                     }
                     .discription{
                         margin-top: 1em;
