@@ -5,6 +5,7 @@ import GifPlayer from '../gifPlayer';
 export default class Layout1 extends Component {
     constructor(props) {
         super(props);
+        this.myRef = React.createRef();
         this.state = {
             data: this.props.data,
             activeIndex: 1,
@@ -18,6 +19,8 @@ export default class Layout1 extends Component {
     }
 
     changeItem = (key) => {
+        const node = this.myRef.current;
+        node.style.display="none";
         this.setState({ activeIndex: key, activeGalaryIndex: 1 })
     }
     changeImage = (key) => {
@@ -49,7 +52,7 @@ export default class Layout1 extends Component {
                                 <div className="base-img">
                                     {
                                         item.assets.map((z, p) => {
-                                            return <div key={p} className={`${(activeGalaryIndex - 1) == p ? null : 'hidden'}`}>
+                                            return <div ref={this.myRef} key={p} className={`${(activeGalaryIndex - 1) == p ? null : 'hidden'}`}>
                                                 {z.url ? <img className={`${z.animation ? 'fade' : null}`} src={`/assets/images/${z.url}`} /> : null}
                                                 {z.animation ? <GifPlayer src={z.animation} />:null}
                                             </div>
