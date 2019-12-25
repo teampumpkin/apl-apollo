@@ -20,7 +20,7 @@ export default class Layout1 extends Component {
 
     changeItem = (key) => {
         const node = this.myRef.current;
-        node.style.display="none";
+        node.style.display = "none";
         this.setState({ activeIndex: key, activeGalaryIndex: 1 })
     }
     changeImage = (key) => {
@@ -49,21 +49,19 @@ export default class Layout1 extends Component {
                         </div>
                         <div className="body">
                             <div className={`leftNav`}>
-                            { item && item.assets ? <div className="base-img">
-                                    
-                                       { item.assets.map((z, p) => {
-                                            return <div ref={this.myRef} key={p} className={`${(activeGalaryIndex - 1) == p ? null : 'hidden'}`}>
-                                                {z.url ? <img className={`${z.animation ? 'fade' : null}`} src={`/assets/images/${z.url}`} /> : null}
-                                                {z.animation ? <GifPlayer src={z.animation} />:null}
-                                            </div>
-                                        })}
-                                  
-                                    {/* <div>
-                                        {item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].url ? <img className={`${item.assets[activeGalaryIndex - 1].animation ? 'fade' : null}`} src={`/assets/images/${item.assets[activeGalaryIndex - 1].url}`} /> : null}
-                                        <GifPlayer src={item && item.assets[activeGalaryIndex - 1] && item.assets[activeGalaryIndex - 1].animation ? `${item.assets[activeGalaryIndex - 1].animation}` : null} />
-                                    </div> */}
-                                </div>
-                                 :null}
+                                {
+                                    data.items.map((x, y) => {
+                                       return  <div className="base-img" ref={this.myRef}>
+                                            {x.assets.map((z, p) => {
+                                                return <div key={p} className={`${(activeGalaryIndex - 1) == p && (activeIndex - 1) == y ? null : 'hidden'}`}>
+                                                    {z.url ? <img className={`${z.animation ? 'fade' : null}`} src={`/assets/images/${z.url}`} /> : null}
+                                                    {z.animation ? <GifPlayer src={z.animation} /> : null}
+                                                </div>
+                                            })}
+                                        </div>
+                                    })
+                                }
+
                                 <div className="galary">
                                     {item ?
                                         item.assets.map((img, idx) => {
