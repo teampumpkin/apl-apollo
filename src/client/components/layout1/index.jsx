@@ -51,7 +51,7 @@ export default class Layout1 extends Component {
                                         item.assets.map((z, p) => {
                                             return <div key={p} className={`${(activeGalaryIndex - 1) == p ? null : 'hidden'}`}>
                                                 {z.url ? <img className={`${z.animation ? 'fade' : null}`} src={`/assets/images/${z.url}`} /> : null}
-                                                <GifPlayer src={z.animation ? `${z.animation}` : null} />
+                                                {z.animation ? <GifPlayer src={z.animation} />:null}
                                             </div>
                                         })
                                     }
