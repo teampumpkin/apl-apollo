@@ -19,8 +19,6 @@ export default class Layout1 extends Component {
     }
 
     changeItem = (key) => {
-        const node = this.myRef.current;
-        node.style.display = "none";
         this.setState({ activeIndex: key, activeGalaryIndex: 1 })
     }
     changeImage = (key) => {
@@ -51,7 +49,7 @@ export default class Layout1 extends Component {
                             <div className={`leftNav`}>
                                 {
                                     data.items.map((x, y) => {
-                                       return  <div className="base-img" key={y} ref={this.myRef}>
+                                       return  <div className="base-img" key={y} >
                                             {x.assets.map((z, p) => {
                                                 return <div key={p} className={`${(activeGalaryIndex - 1) == p && (activeIndex - 1) == y ? null : 'hidden'}`}>
                                                     {z.url ? <img className={`${z.animation ? 'fade' : null}`} src={`/assets/images/${z.url}`} /> : null}
