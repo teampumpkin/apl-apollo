@@ -177,4 +177,20 @@
             }
         }    
     }
+
+    @media only screen and (max-width: 600px) {
+        .card {
+            .body{
+                margin-top: 10px;
+                grid-template-columns: 1fr;
+            }
+            .leftNav{
+                height: 50vh;
+            }
+            .galary{
+                bottom: 0!important;
+                width: 100%!important;
+            }
+        }
+    }
 }
