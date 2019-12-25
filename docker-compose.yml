@@ -4,6 +4,19 @@ volumes:
     db-data:
 
 services:
+  database:
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - DB_URI=mysql://${MYSQL_USER}:${MYSQL_ROOT_PASSWORD}@listings-service-db/${MYSQL_DATABASE}?charset=UTF8
+    image: mysql:5.7.20
+    restart: always
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./dump.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 0.0.0.0:${MYSQL_PORT}:3306
+
   apl:
     env_file:
       - ./.env
@@ -15,6 +28,8 @@ services:
         debug_port: ${DEBUG}
     command: npm run start
     container_name: apl
+    depends_on:
+      - database
     restart: always
     volumes:
       - ./src:/app/apl/src

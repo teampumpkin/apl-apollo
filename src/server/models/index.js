@@ -6,24 +6,34 @@ const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const db = {};
-const config = {
-    "username": process.env.RDS_USER ,
-    "password": process.env.RDS_PASS,
-    "database": process.env.RDS_DB,
-    "host": process.env.RDS_HOST,
-    // "port":process.env.RDS_PORT,
-    // "protocol":"tcp",
-    "dialect": "mysql",
-    "operatorsAliases": false
-};
-console.log("=========>",config)
-let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
-} else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
+// const config = {
+//   // "username": process.env.RDS_USER,
+//   // "password": process.env.RDS_PASS,
+//   // "database": process.env.RDS_DB,
+//   // // "host": process.env.RDS_HOST,
+//   // // "port": process.env.RDS_PORT,
+//   // "dialect": "mysql"
+//   dialect: "mysql",
+//   seederStorage: "sequelize",
+//   url: process.env.DB_URI
+// };
 
+
+let sequelize;
+// if (config.use_env_variable) {
+//   sequelize = new Sequelize(process.env[config.use_env_variable], config);
+// } else {
+//   sequelize = new Sequelize(config.database, config.username, config.password, config);
+// }
+
+const dbURI = process.env.DB_URI;
+sequelize = new Sequelize(dbURI, {
+  dialectOptions: {
+    charset: "utf8",
+    multipleStatements: true
+  },
+  logging: false
+});
 fs
   .readdirSync(__dirname)
   .filter(file => {
