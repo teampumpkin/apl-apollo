@@ -5,6 +5,13 @@ body{
     width: auto;
     height: 100vh;
     position: relative;
+    .animation-outline{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 9;    
+        // display: none;
+    }
     .map{
         cursor: grab;
         overflow: auto;
@@ -24,8 +31,8 @@ body{
             width: 100%;
             .marker{
                 position: absolute;
-                width: 25px;
-                height: 24px;
+                width: 41px;
+                height: 39px;
                 border-radius: 2px;
                 -webkit-transition: width 1s; /* Safari */
                 transition: width 1s;

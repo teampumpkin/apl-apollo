@@ -14,9 +14,15 @@ export default class MainContainer extends Component {
     }
   }
   componentWillMount() {
-    
+
   }
 
+  handleOnMouseEnter(e, x) {
+    document.getElementById('animation-gif').setAttribute('src', `../assets/map-gifs/${x.animation}`);
+  }
+  handleOnMouseLeave(e) {
+    document.getElementById('animation-gif').setAttribute('src', null);
+  }
   componentWillReceiveProps(nextProps) {
     const { list } = nextProps.productReducer;
     if (list && list.length > 0) {
@@ -29,15 +35,16 @@ export default class MainContainer extends Component {
   }
 
   showProduct = (category) => {
-    this.props.history.push(`/${category.name.replace(' ','-').toLowerCase()}`);
+    this.props.history.push(`/${category.name.replace(' ', '-').toLowerCase()}`);
   }
   render() {
     return (
       <div className="body">
         <DragScroll className="map" >
           <img src="../assets/map.png" alt="" />
+          <img id="animation-gif" src="" className="animation-outline" alt="" />
           <div className={'chart'}>
-            <Markers mappoints={this.state.MAP} onMarkerClick={this.showProduct} />
+            <Markers mappoints={this.state.MAP} onMarkerClick={this.showProduct} onMouseEnter={this.handleOnMouseEnter} onMouseLeave={this.handleOnMouseLeave} />
           </div>
         </DragScroll>
       </div>
