@@ -49,17 +49,30 @@
         width: 18px;
     }
 }
-
-.wrapper.active .contents {
+.wrapper:hover .point{
+    display: none;
+}
+.wrapper:hover .contents {
     width:100vh;
     padding: 10px;
     white-space: nowrap;
     background-color: #00ACB6;
 }
-.wrapper:not(.active) .point{
+// .wrapper.active .contents {
+//     width:100vh;
+//     padding: 10px;
+//     white-space: nowrap;
+//     background-color: #00ACB6;
+// }
+.wrapper:not(:hover) .point{
     -webkit-transition: opacity 0.8s ease-in-out;
     -moz-transition: opacity 0.8s ease-in-out;
     -o-transition: opacity 0.8s ease-in-out;
     transition: opacity 0.8s ease-in-out;
     opacity: 1;
+}
+.animation-outline{
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }

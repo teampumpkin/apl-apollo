@@ -3,6 +3,7 @@ import MainStyle from './marker.scss';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import markerPoint from '../../assets/svg/point2.svg';
 import arrowPoint from '../../assets/svg/arrow-right-circle.svg';
+import GifPlayer from '../gifPlayer';
 export default class Markers extends Component {
   constructor(props) {
     super(props);
@@ -14,12 +15,12 @@ export default class Markers extends Component {
   componentWillReceiveProps(nextProps){
     this.setState({MAP:nextProps.mappoints});
   }
-  handleRemove = (e) => {
-    document.getElementById(e).classList.remove('active');
-  }
-  handleClick = (e) =>{
-    document.getElementById(e).classList.add('active');
-  }
+  // handleRemove = (e) => {
+  //   document.getElementById(e).classList.remove('active');
+  // }
+  // handleClick = (e) =>{
+  //   document.getElementById(e).classList.add('active');
+  // }
 
   render() {
     return (
@@ -43,9 +44,11 @@ export default class Markers extends Component {
             transitionAppearTimeout={1000}
             transitionEnter={false}
             transitionLeave={false}>
+             {/* <div className={`wrapper ${x.isActive ? 'active':null}`} style={position} id={`wrapper-${y}`} onClick={()=>this.handleClick(`wrapper-${y}`)} tabIndex={y}  key={y}  onBlur={(e) =>this.handleRemove(`wrapper-${y}`)}> */}
              <div className={`wrapper ${x.isActive ? 'active':null}`} style={position} id={`wrapper-${y}`} onClick={()=>this.handleClick(`wrapper-${y}`)} tabIndex={y}  key={y}  onBlur={(e) =>this.handleRemove(`wrapper-${y}`)}>
               <img key={y} style={x.style} ref={`mark-${y}`} name={`marker-point-${y}`}   className={`marker point`} src={markerPoint} alt="" />
               <div style={{backgroundColor:x.colorCode}} name={`marker-point-${y}`} className={`contents`} onClick={() =>this.props.onMarkerClick(x)}  >{x.name}<img src={arrowPoint} alt=""  /></div> 
+              {/* {x.animation ? <GifPlayer className="animation-outline" data={Math.random() * (10 - 100) + 100} src={`${x.animation ?x.animation:null}`} /> : null} */}
             </div>
             </ReactCSSTransitionGroup>
           })

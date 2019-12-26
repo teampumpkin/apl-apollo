@@ -7,6 +7,7 @@ export default class MainContainer extends Component {
     super(props);
     this.props.getProducts();
     // this.props.getAssets(17);
+
     this.state = {
       popup: false,
       MAP: []
@@ -27,21 +28,6 @@ export default class MainContainer extends Component {
     }
   }
 
-  onMarkerClick = (e) => {
-    let MAP = this.state.MAP;
-    let idx = null;
-    if (e.target.classList.contains('marker')) {
-      idx = e.target.getAttribute('name').split('-')[2];
-    }
-    MAP = MAP.map((x, y) => {
-      x.isActive = false;
-      if (y == idx) {
-        x.isActive = true;
-      }
-      return x;
-    });
-    this.setState({ MAP: MAP });
-  }
   showProduct = (category) => {
     this.props.history.push(`/${category.name.replace(' ','-').toLowerCase()}`);
   }
@@ -50,7 +36,7 @@ export default class MainContainer extends Component {
       <div className="body">
         <DragScroll className="map" >
           <img src="../assets/map.png" alt="" />
-          <div className={'chart'} onClick={this.onMarkerClick}>
+          <div className={'chart'}>
             <Markers mappoints={this.state.MAP} onMarkerClick={this.showProduct} />
           </div>
         </DragScroll>
