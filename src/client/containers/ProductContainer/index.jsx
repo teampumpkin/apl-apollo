@@ -20,7 +20,7 @@ export default class Product extends Component {
         if (data && data.layout) {
             switch (data.layout) {
                 case 'layout1':
-                    return <Layout1 data={data} />;
+                    return <Layout1 data={data} history={this.props.history}/>;
                 default:
                     return null;
             }

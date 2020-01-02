@@ -8,7 +8,7 @@ export default class Layout1 extends Component {
         this.myRef = React.createRef();
         this.state = {
             data: this.props.data,
-            activeIndex: 1,
+            activeIndex: 0,
             activeGalaryIndex: 1,
             layout: {
                 header: null,
@@ -24,10 +24,13 @@ export default class Layout1 extends Component {
     changeImage = (key) => {
         this.setState({ activeGalaryIndex: key })
     }
-
+    backToHome = () =>{
+        this.props.history.goBack();
+    }
     render() {
         const { data, activeIndex, activeGalaryIndex } = this.state;
         const item = Object.keys(data).length > 0 && data.items.length > 0 ? data.items[activeIndex - 1] : null;
+        const base = data.items[0];
         return (
             <>
                 {data && Object.keys(data).length > 0 ? <div className="layout1" >
@@ -49,17 +52,28 @@ export default class Layout1 extends Component {
                             <div className={`leftNav`}>
                                 {
                                     data.items.map((x, y) => {
-                                       return  <div className="base-img" key={y} >
-                                            {x.assets.map((z, p) => {
-                                                return <div key={p} className={`${(activeGalaryIndex - 1) == p && (activeIndex - 1) == y ? null : 'hidden'}`}>
-                                                    {z.url ? <img className={`${z.animation ? 'fade' : null}`} src={`/assets/images/${z.url}`} /> : null}
-                                                    {z.animation ? <GifPlayer data={Math.random() * (10 - 100) + 100} src={`${(activeGalaryIndex - 1) == p && (activeIndex - 1) == y ?z.animation:null}`} /> : null}
-                                                </div>
-                                            })}
+                                        return <div className="base-img" key={y} >
+                                            {
+                                                x.assets.map((z, p) => {
+                                                    return <div key={p} className={`${(activeGalaryIndex - 1) == p && (activeIndex - 1) == y ? null : 'hidden'}`}>
+                                                        {z.url ? <img className={`${z.animation ? 'fade' : null}`} src={`/assets/images/${z.url}`} /> : null}
+                                                        {z.animation ? <GifPlayer data={Math.random() * (10 - 100) + 100} src={`${(activeGalaryIndex - 1) == p && (activeIndex - 1) == y ? z.animation : null}`} /> : null}
+                                                    </div>
+                                                })
+                                            }
                                         </div>
                                     })
                                 }
-
+                                <div className={`base-img ${activeIndex != 0 ? 'hidden' : null}`}>
+                                    {
+                                        base.assets.map((z, p) => {
+                                            return <div key={p} className={`${(activeGalaryIndex - 1) == p ? null : 'hidden'}`}>
+                                                {z.url ? <img className={``} src={`/assets/images/${z.url}`} /> : null}
+                                            </div>
+                                        })
+                                    }
+                                </div>
+                                
                                 <div className="galary">
                                     {item ?
                                         item.assets.map((img, idx) => {
@@ -70,21 +84,27 @@ export default class Layout1 extends Component {
                                     }
                                 </div>
                             </div>
+                           
                             <div className="rightNav">
+                            <span onClick={this.backToHome}><img src="../../assets/svg/arrow-left-circle.svg" alt=""/>&nbsp;<strong>Back</strong></span>
                                 <div className="row">
                                     <div className="head title">
                                         <span> {data.name.split(' ')[0]} </span><span>{data.name.split(' ').splice(1).join(' ')}</span>
                                     </div>
                                     <p className="discription">{data.discription}</p>
                                 </div>
-                                <div className={`component row`} style={getGradient(data.colorCode)}>
-                                    <div className="item">
-                                        <span>&nbsp;{item ? item.subTitle : null}</span>
-                                    </div>
-                                    <div className="discription">
-                                        <p>{item ? item.discription : null}</p>
-                                    </div>
-                                </div>
+                                {
+                                    data.items.map((item, y) => {
+                                        return <div key={y} className={`component row ${activeIndex - 1 != y ? 'hidden' : null}`} style={getGradient(data.colorCode)}>
+                                            <div className="item">
+                                                <span>&nbsp;{item ? item.subTitle : null}</span>
+                                            </div>
+                                            <div className="discription">
+                                                <p>{item ? item.discription : null}</p>
+                                            </div>
+                                        </div>
+                                    })
+                                }
                             </div>
                         </div>
                     </div>

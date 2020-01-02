@@ -55,6 +55,10 @@
                     width: 100%;
                     border-radius: 2px;
                     font-family: Gotham-bold;
+                    margin-left: -106%;
+                    width: 100%;
+                    -webkit-animation: slideTab 1s forwards;
+                    animation: slideTab 1s forwards;
                 }      
             }
         }
@@ -66,13 +70,15 @@
             font-size: 20px;
             grid-gap: 2em;
             height: 100%;
+            width: 100%;
             margin-top: 3em;
             .leftNav {
                 text-align: center;
                 position: relative;
+                flex-direction: column;
+                display: flex;
                 .base-img{
                     position: relative;
-                    margin: auto;
                     .fade{
                         opacity: 0.4;
                     }
@@ -92,16 +98,14 @@
                     }
                 }
                 .galary {
-                    position: absolute;
-                    bottom: 4em;
-                    left: 0px;
-                    right: 0px;
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
                     justify-content: space-evenly;
                     margin-left: auto;
                     margin-right: auto;
+                    margin-top: auto;
+                    margin-bottom: 4em;
                     width: 50%;
                     >img {
                         width: 80px;
@@ -120,6 +124,16 @@
                 flex-flow: column;
                 height: 100%;
                 font-size: 16px;
+                >span{
+                    position: absolute;
+                    cursor: pointer;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    >strong{
+                        text-decoration: underline;
+                    }
+                }
                 .row{
                     height: fit-content;
                     margin-left:0px;
@@ -127,6 +141,9 @@
                     .discription{
                         margin:1em 0px;
                     }
+                }
+                .row:first-of-type{
+                    margin-top: 2em;
                 }
                 .title {
                     text-transform: uppercase;
@@ -139,7 +156,6 @@
                     border-top: 5px solid transparent;
                     padding: 1.5em 2.5em;
                     border-radius: 2px;
-                    height: 100%;
                     align-content: baseline;
                     display: flex;
                     flex-flow: column;
@@ -160,6 +176,22 @@
                     p {
                         opacity: 0.9;
                     }
+                    margin-left: -106%;
+                    width: 100%;
+                    -webkit-animation: slide 1s forwards;
+                    animation: slide 1s forwards;
+                }
+                @-webkit-keyframes slide {
+                    100%{ margin-left:0%;}
+                }
+                @keyframes slide {
+                    100%{ margin-left:0%;}
+                }
+                @-webkit-keyframes slideTab {
+                    100%{ margin-left:0%;}
+                }
+                @keyframes slideTab {
+                    100%{ margin-left:0%;}
                 }
             }
         }    
