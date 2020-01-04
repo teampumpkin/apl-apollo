@@ -135,6 +135,7 @@
                     margin-left:0px;
                     margin-right: 0px;
                     .discription{
+                        text-align: justify;
                         margin:1em 0px;
                     }
                 }
@@ -189,16 +190,99 @@
 
     @media only screen and (max-width: 600px) {
         .card {
+            padding:0 0.5em;
+            width: unset;
+            min-width: unset;
             .body{
                 margin-top: 10px;
                 grid-template-columns: 1fr;
+                grid-gap:0.5em;
+
+                .leftNav{
+                    .galary{
+                        bottom: 0!important;
+                        width: 100%!important;
+                        margin-bottom: 0.5em;
+                        margin-top: 0.5em;
+                        >img{
+                            width: 40px;
+                            height: 40px;
+                            border:2px solid transparent;
+                        }
+                    }
+                }
+                .rightNav{
+                    padding: 0 0.5em;
+                    >span{
+                        padding-left: 0.5em;
+                    }
+                    .title{
+                        font-size: 25px;
+                        padding-bottom: 0px;
+                    }
+                    .row .discription{
+                        margin:0.5em 0px;
+                    }
+                    .component {
+                        -webkit-animation: none;
+                        animation: none;
+                        margin-left: 0%;
+                    }
+                }
             }
-            .leftNav{
-                height: 50vh;
-            }
-            .galary{
-                bottom: 0!important;
-                width: 100%!important;
+            
+            .header{
+                .row {
+                    display: grid;
+                    grid-auto-flow: column;
+                    grid-auto-columns: minmax(max-content, 340px);
+                    width: 100%;
+                    overflow: auto;
+                    margin:auto;
+                    .col {
+                        display: grid;
+                        font-size: 8px;
+                        padding: 10px;
+                        font-weight: 600;
+                        font-style: normal;
+                        padding: 1em;
+                        justify-content: center; 
+                        white-space: nowrap;
+                        align-items: center;
+                        text-transform: uppercase;
+                        cursor: pointer;  
+                        min-height: unset!important;
+                        padding-top:2em;
+                        >img {
+                            width: 18px;
+                            height: 18px;
+                            margin: auto;
+                        }
+                        >label{
+                            display: flex;
+                            align-self: baseline;
+                        }
+                        min-height: 75px;
+                    }
+                    .col:not(:last-of-type):after{
+                        content: "";
+                        width: 1px;
+                        height: 3em;
+                        border-right: 1.5px solid #a5a1a194;
+                        position: absolute;
+                        right: 0px;
+                        top: 0px;
+                        bottom: 0px;
+                        margin: auto;
+                    }
+                    .active {
+                        color: #fff;
+                        border-bottom: 5px solid transparent;
+                        width: 100%;
+                        border-radius: 2px;
+                        font-family: Gotham-bold;
+                    }      
+                }
             }
         }
     }
