@@ -41,7 +41,7 @@ export default class MainContainer extends Component {
     return (
       <div className="body">
         <DragScroll className="map" >
-          <img src="../assets/map.png" alt="" />
+          <img src="../assets/map.jpg" alt="" />
           <img id="animation-gif" src="" className="animation-outline" alt="" />
           <div className={'chart'}>
             <Markers mappoints={this.state.MAP} onMarkerClick={this.showProduct} onMouseEnter={this.handleOnMouseEnter} onMouseLeave={this.handleOnMouseLeave} />
