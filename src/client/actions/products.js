@@ -34,7 +34,7 @@ export function getProductsAction() {
         // dispatch(getProductsSuccess({assets:assets,products:products}));
         // return {assets:assets,products:products};
         dispatch(requestProducts());
-        return axios.get('/api/products')
+        return axios.get('https://www.aplapollo.com/world/api/products')
             .then(response => {
                 if (response.data.success == true) {
                     dispatch(getProductsSuccess(response.data.data));
@@ -69,7 +69,7 @@ function getProductAssetsFailure(errorMessage) {
 
 export function getProductAssetsAction(id) {
     return (dispatch, getState) => {
-        return axios.get(`/api/product/${id}`).then(response => {
+        return axios.get(`https://www.aplapollo.com/world/api/product/${id}`).then(response => {
             if (response.data.success == true) {
                 dispatch(getProductAssetsSuccess(response.data.data));
             } else {

@@ -13,7 +13,7 @@ const ProductContainer = loadable(() =>
 export default class App extends Component {
   render() {
     return (
-      <Router history={history}>
+      <Router history={history}  basename="/world/">
           <Route path="/" exact={true} component={MainContainer} />
           <Route path="/:category" component={ProductContainer} />
       </Router>
