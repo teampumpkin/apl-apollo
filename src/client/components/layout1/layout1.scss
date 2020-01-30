@@ -124,8 +124,8 @@
                     position: absolute;
                     cursor: pointer;
                     height: 32px;
-                    display: flex;
                     align-items: center;
+                    width: 100%;
                     >strong{
                         text-decoration: underline;
                     }
@@ -284,6 +284,22 @@
                     }      
                 }
             }
+        }
+    }
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-height: 50px;
+    align-items: center;
+    >a{
+        text-align: right;
+        margin-right: 5em;
+        text-decoration: none;
+        color: inherit;
+        >img{
+            width: 24px;
+            height: 24px;
         }
     }
 }

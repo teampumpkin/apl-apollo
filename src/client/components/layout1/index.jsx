@@ -86,7 +86,10 @@ export default class Layout1 extends Component {
                             </div>
                            
                             <div className="rightNav">
-                            <span onClick={this.backToHome}><img src="../../assets/svg/arrow-left-circle.svg" alt=""/>&nbsp;<strong>Back</strong></span>
+                                <span className="buttons">
+                                    <span onClick={this.backToHome}><img src="../../assets/svg/arrow-left-circle.svg" alt=""/>&nbsp;<strong>Back</strong></span>
+                                    <a href="https://aplapollo.com"><img src="../../assets/home.png" alt=""/>&nbsp;<strong>Main Site</strong></a>
+                                </span>
                                 <div className="row">
                                     <div className="head title">
                                         <span> {data.name.split(' ')[0]} </span><span>{data.name.split(' ').splice(1).join(' ')}</span>
