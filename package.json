@@ -20,7 +20,7 @@
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
     "dragscroll": "0.0.8",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "imagemin-webpack-plugin": "^2.4.2",
     "memory-cache": "^0.2.0",
     "mysql2": "^2.0.1",
